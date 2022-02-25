@@ -1,0 +1,45 @@
+
+
+ a{
+    background: tomato;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100px;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    border-radius: 5px;
+    position: relative;
+ } 
+ a span{
+    display: block;
+    width: 100px;
+    background: #000;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0px;
+    transition: 1s;
+    /* display: none; */
+ }
+ a span::before{
+    content: "";
+   
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid blue;
+    position: absolute;
+    top: 22px;
+    transform: rotate(45deg) translateX(-50%);
+    left: 70%;
+ }
+ a:hover span{
+  visibility: visible;
+    opacity: 1px;
+ }
+ 
